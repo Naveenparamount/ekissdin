@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="tdapp" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>eKissDin - StayHome</title>
+        <meta content="Coderthemes" name="RandomAuthor" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="assets/css/app.css" rel="stylesheet" type="text/css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+		<script src="controllers/TruthDareController.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/metisMenu.min.js"></script>
+		<script src="assets/js/waves.js"></script>
+		<script src="assets/js/jquery.slimscroll.js"></script>
+
+		<script src="assets/js/jquery.core.js"></script>
+		<script src="assets/js/jquery.app.js"></script>
+    </head>
+
+
+    <body ng-controller="TruthDareController">
+  
+
+        <div id="wrapper">
+			<div class="content-page">
+				<header class="header text-center">
+                    <img src="http://ekissdin.kttutor.in/image/ekissdin%20copy.png" width="175" height="65" style="padding-top: 0px;border-top-width: 0px;border-top-style: solid;margin-top: 31px;">
+                </header>
+                <div class="content">
+                    <div class="container-fluid">
+                        <div style="text-align: center;">
+							<h1 class="h3 mb-3 font-weight-normal">Truth or Dare ({{score}})</h1>
+							<div class="btn-group-vertical">
+							<button class="btn btn-lg btn-primary" ng-click="truth()">Truth</button>
+							<button class="btn btn-lg btn-danger" ng-click="dare()">Dare</button>
+							</div>
+							<h2 class="h4 mb-3 font-weight-normal">{{current}}</h2>
+							<button ng-click="done()" class="btn btn-success">Done</button>
+							<button ng-click="lost()" class="btn btn-warning">Lost</button>
+							<h2 class="h5 mb-3 font-weight-light">{{msgToUser}}</h2>
+						</div>
+                    </div>
+                </div>
+                </div>
+                <footer class="footer text-right">
+                    eKissDin
+                </footer>
+            </div>
+        
+        
+
+		
+
+    </body>
+</html>

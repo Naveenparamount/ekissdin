@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="index" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>eKissDin - StayHome</title>
+        <meta content="Coderthemes" name="RandomAuthor" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/app.css" rel="stylesheet" type="text/css" />
+        <!-- your custom css -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+		<!-- your custom JS -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+
+		<script src="controllers/IndexController.js"></script>
+    </head>
+
+
+    <body ng-controller="IndexController">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            
+           
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-xl-4">
+
+                                <!-- Chat -->
+                                <div class="portlet"><!-- /primary heading -->
+                                    <div class="portlet-heading">
+                                        <h3 class="portlet-title text-dark text-uppercase">
+                                            Chat
+                                        </h3>
+                                        <div class="portlet-widgets">
+                                            <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
+                                            <span class="divider"></span>
+                                            <a data-toggle="collapse" data-parent="#accordion1" href="#portlet-3"><i class="ion-minus-round"></i></a>
+                                            <span class="divider"></span>
+                                            <a href="#" data-toggle="remove"><i class="ion-close-round"></i></a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div id="portlet-3" class="panel-collapse collapse show">
+                                        <div class="portlet-body">
+                                            <div class="chat-conversation">
+                                                <ul id="autoscroll" class="conversation-list slimscroll" style="height: 330px;">
+                                                    <li ng-class="{'clearfix odd':currentUser==msg.name,'clearfix':currentUser!=msg.name}"ng-repeat="msg in messeges">
+														<div class="chat-avatar">
+                                                            <img ng-src="{{msg.gender=='male' && 'assets/images/users/male_avatar.jpg' || 'assets/images/users/female_avatar.jpg'}}" alt=msg.gender>
+                                                            <i>{{msg.time}}</i>
+                                                        </div>
+                                                        <div class="conversation-text">
+                                                            <div class="ctext-wrap">
+                                                                <i>{{msg.name}}</i>
+                                                                <p>
+                                                                    {{msg.message}}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+														
+													</li>
+													
+                                                    
+                                                        </div>
+                                                </ul>
+                                                <div class="row">
+                                                    <div class="col-9 chat-inputbar">
+                                                        <input type="text" ng-model="currentMessage" ng-keyup="$event.keyCode == 13 && random()" class="form-control chat-input" placeholder="Enter your text">
+                                                    </div>
+                                                    <div class="col-3 chat-send">
+                                                        <button ng-click="random()"class="btn btn-info btn-block">Send</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+
+                        </div> <!-- End row -->
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <footer class="footer text-right">
+                    eKissDin
+                </footer>
+
+            </div>
+
+
+            
+
+        </div>
+        <!-- END wrapper -->
+
+<!-- jQuery  -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/metisMenu.min.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+
+
+
+<!-- App js -->
+<script src="assets/js/jquery.core.js"></script>
+<script src="assets/js/jquery.app.js"></script>
+
+        
+       
+    </body>
+</html>
